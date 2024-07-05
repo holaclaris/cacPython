@@ -1,0 +1,105 @@
+{% include 'defaults/head.html' %}
+
+<body>
+    <!-- <noscript> para avisar si JS esta inhabilitado -->
+    <noscript>Por favor habilite JavaScript en su navegador para poder visualizar el sitio</noscript>
+    <div class="contenedorPrincipal">
+
+        {% include 'defaults/banner.html' %}
+
+        {% include 'defaults/header.html' %}
+
+        <div class="contenedorPortada paginas">
+            <img src="{{url_for('static', filename='img/fotomar.jpg')}}" alt="Foto de playa paradisiaca">
+        </div>
+
+        <main id="nosotros">
+            <div class="guias">
+                <h1>Nuestros Guías</h1>
+                <div class="cards">
+                    <div class="card">
+                        <div class="contenidoCard">
+                            <img class="cardImg" src="#" alt="Foto de Guía">
+                            <div class="nombreYApellido">
+                                <h2 class="nombreGuia">Lorem ipsum</h2>
+                                <h2 class="apellidoGuia">Lorem ipsum</h2>
+                            </div>
+                            <p class="experienciaGuia nacionalidadGuia">Tiene mas de xx años de experiencia como guía de
+                                turismo de
+                            </p>
+                            <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, fuga hic.</p> -->
+                        </div>
+                        <div class="footerCard">
+                            <a href="#">Mostrar mas</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="contenidoCard">
+                            <img class="cardImg" src="#" alt="Foto de Guía">
+                            <div class="nombreYApellido">
+                                <h2 class="nombreGuia">Lorem ipsum</h2>
+                                <h2 class="apellidoGuia">Lorem ipsum</h2>
+                            </div>
+                            <p class="experienciaGuia nacionalidadGuia">Tiene mas de xx años de experiencia como guía de
+                                turismo de
+                            </p>
+                            <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, doloremque error.
+                                Corporis.</p> -->
+                        </div>
+                        <div class="footerCard">
+                            <a href="#">Mostrar mas</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="contenidoCard">
+                            <img class="cardImg" src="#" alt="Foto de Guía">
+                            <div class="nombreYApellido">
+                                <h2 class="nombreGuia">Lorem ipsum</h2>
+                                <h2 class="apellidoGuia">Lorem ipsum</h2>
+                            </div>
+                            <p class="experienciaGuia nacionalidadGuia">Tiene mas de xx años de experiencia como guía de
+                                turismo de
+                            </p>
+                            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo natus quisquam quam quidem
+                                aperiam
+                                veniam reprehenderit.</p> -->
+                        </div>
+                        <div class="footerCard">
+                            <a href="#">Mostrar mas</a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="contenidoCard">
+                            <img class="cardImg" src="#" alt="Foto de Guía">
+                            <div class="nombreYApellido">
+                                <h2 class="nombreGuia">Lorem ipsum</h2>
+                                <h2 class="apellidoGuia">Lorem ipsum</h2>
+                            </div>
+                            <p class="experienciaGuia nacionalidadGuia">Tiene mas de xx años de experiencia como guía de
+                                turismo de
+                            </p>
+                            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In harum, quod tempora cumque
+                                aspernatur ad
+                                dicta eum repellendus?</p> -->
+                        </div>
+                        <div class="footerCard">
+                            <a href="#">Mostrar mas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        {% include 'defaults/footer.html' %}
+    </div>
+
+    <!-- Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="{{url_for('static', filename='js/app.js')}}"></script>
+    <script src="{{url_for('static', filename='js/scriptGuias.js')}}"></script>
+</body>
+
+</html>

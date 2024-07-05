@@ -1,0 +1,90 @@
+{% include 'defaults/head.html' %}
+
+<body>
+    <!-- <noscript> para avisar si JS esta inhabilitado -->
+    <noscript>Por favor habilite JavaScript en su navegador para poder visualizar el sitio</noscript>
+    <div class="contenedorPrincipal">
+
+        {% include 'defaults/banner.html' %}
+
+        {% include 'defaults/header.html' %}
+
+        <div class="contenedorPortada">
+            <img src="{{ url_for('static', filename='img/fotomar.jpg') }}" alt="playa paradisiaca" title="Fotografia por Herman.io">
+        </div>
+
+        <main id="inicio">
+
+            <div class="presentacion">
+                <p>¡Descubre la diversidad de Argentina con nuestros emocionantes paquetes de viaje!
+                </p>
+                <p>¡Prepárate para explorar!</p>
+            </div>
+
+            <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="./pages/paquetes.html">
+                            <img src="{{ url_for('static', filename='img/norte.jpg') }}" class="d-block w-100" alt="Norte argentino">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Los mejores destinos al mejor precio!</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./pages/nuestros-guias.html">
+                            <img src="{{ url_for('static', filename='img/Guias.jpg') }}" class="d-block w-100" alt="Nuestros guias">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>No te pierdas nada con nuestros guias</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="./pages/contacto.html">
+                            <img src="{{ url_for('static', filename='img/contacto-imagen.jpg') }}" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>Atencion personalizada</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="presentacion">
+                <p>Activa el <i>modo avión</i> en tu vida</p>
+                <p>Activa el modo <i>Waw</i></p>
+            </div>
+
+        </main>
+
+        {% include 'defaults/footer.html' %}
+    </div>
+
+    <!-- Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+      
+    <script src="{{url_for('static', filename='js/app.js')}}"></script>
+  </body>
+  
+  </html>
+  
