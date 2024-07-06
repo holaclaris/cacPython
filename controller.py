@@ -18,9 +18,10 @@ def obtener_paquetes():
 
         return resultados
 
-#Pendientes:
-#Create
-#Update
+# Pendientes:
+# Create
+# Update
+
 
 #Delete
 
@@ -32,7 +33,7 @@ def eliminar_paquete(id):
         query = "DELETE FROM paquetes WHERE id=%s"
         cursor.execute(query, id)
         result = cursor
-        
+
     conexion.commit()
     conexion.close()
 
