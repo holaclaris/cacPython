@@ -22,74 +22,26 @@
                 </p>
             </div>
 
+            <!-- Renderizamos contenido de la db -->
+
             <div class="container">
 
+                {% for i in paquetes %}
 
                 <div class="item">
-                    <h2>NORTE ARGENTINO</h2>
-                    <img src="../assets/images/norte.jpg" alt="foto de norte argentino">
-                    <p>Disfruta de emocionantes excursiones a las antiguas ruinas de las culturas preincaicas en
-                        Tilcara,
-                        maravíllate con las coloridas artesanías en los mercados de Purmamarca y descubre rica historia
-                        colonial de
-                        Salta "La Linda". Además, tendrás la oportunidad de degustar la deliciosa gastronomía
-                        regional, que incluye platos tradicionales como empanadas salteñas y humita en chala. Con guías
-                        expertos que
-                        te acompañarán en cada paso del camino y alojamientos cómodos y acogedores, nuestro paquete
-                        turístico en el
-                        Norte Argentino te brindará una experiencia inolvidable llena de aventura, cultura y belleza
-                        natural.</span> </p>
+                    <h2>{{ i[1]}}</h2>
+                    <img src={{ i[4] }} alt={{ i[1] }}>
+                    <p> {{ i[3] }}</p>
 
-                    <button class="btn-comprar">Info</button>
-                    <button class="btn-carrito">Comprar</button>
-
-                    <div class="star-rating">
-                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
-                            title="5 estrellas">★</label>
-                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
-                            title="4 estrellas">★</label>
-                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
-                            title="3 estrellas">★</label>
-                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
-                            title="2 estrellas">★</label>
-                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
-                            title="1 estrella">★</label>
-                    </div>
+                    <a href="/destinos/editar_paquete/{{i[0]}}"><button class="btn-comprar">Editar</button></a>
+                    <a href="/destinos/eliminar_paquete/{{i[0]}}"><button class="btn-carrito">Eliminar</button></a>
                 </div>
 
-                <div class="item">
-                    <h2>PATAGONIA</h2>
-                    <img src="../assets/images/patagonia.jpg" alt="foto de Patagonia argentina">
-                    <p>
-                        Desde los picos nevados de los Andes hasta los imponentes glaciares y la vasta estepa, cada
-                        momento te dejará sin aliento.
-                        Nuestro paquete incluye excursiones guiadas al Parque Nacional Los Glaciares, con el majestuoso
-                        Glaciar Perito Moreno.
-                        Explora pintorescos pueblos patagónicos como El Calafate y El Chaltén, donde la cultura local se
-                        mezcla con la naturaleza virgen.
-                        Ofrecemos actividades opcionales como senderismo, trekking, navegación y avistamiento de fauna
-                        silvestre.
-                        Nuestro paquete turístico en la Patagonia Argentina es ideal para los amantes de la naturaleza y
-                        experiencias auténticas.
-                    </p>
-                    <button class="btn-comprar">Info</button>
-                    <button class="btn-carrito">Comprar</button>
+                {% endfor %}
 
-                    <div class="star-rating">
-                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
-                            title="5 estrellas">★</label>
-                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
-                            title="4 estrellas">★</label>
-                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
-                            title="3 estrellas">★</label>
-                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
-                            title="2 estrellas">★</label>
-                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
-                            title="1 estrella">★</label>
-                    </div>
-                </div>
-
-                <div class="item">
+                <!-- Contenido de la web anterior: -->
+                 
+                <!-- <div class="item">
                     <h2>CUYO</h2>
                     <img src="../assets/images/cuyo.jpg" alt="foto de region de Cuyo">
                     <p>Sumérgete en la rica historia, cultura vibrante y paisajes impresionantes de esta región única.
@@ -105,20 +57,8 @@
                         cultura.</p>
                     <button class="btn-comprar">Info</button>
                     <button class="btn-carrito">Comprar</button>
+                </div>  -->
 
-                    <div class="star-rating">
-                        <input type="radio" id="star5" name="rating" value="5" /><label for="star5"
-                            title="5 estrellas">★</label>
-                        <input type="radio" id="star4" name="rating" value="4" /><label for="star4"
-                            title="4 estrellas">★</label>
-                        <input type="radio" id="star3" name="rating" value="3" /><label for="star3"
-                            title="3 estrellas">★</label>
-                        <input type="radio" id="star2" name="rating" value="2" /><label for="star2"
-                            title="2 estrellas">★</label>
-                        <input type="radio" id="star1" name="rating" value="1" /><label for="star1"
-                            title="1 estrella">★</label>
-                    </div>
-                </div>
             </div>
 
         </main>
