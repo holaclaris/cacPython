@@ -18,7 +18,7 @@ main h2 {
   
 
 .container {
-  padding: 40px 0;
+  padding: 15px 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;

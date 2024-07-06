@@ -105,6 +105,7 @@ header {
     position: absolute;
     top: 1vh;
     width: 100%;
+    z-index:2;
 }
 
 #hamburguesa {
@@ -284,6 +285,23 @@ main#inicio {
 
 /*Media Queries*/
 
+@media screen and (max-width:576px){
+    .contenedorTitulo.paginas{
+        left: 14%;
+        top: 5px;
+        scale: 0.7;
+    }
+    .contenedorTitulo.paginas p{
+        display:none;
+    }
+    .contenedorPortada.paginas{
+        display:none
+    }
+    main.paginas{
+        margin-top:40px;
+    }
+}
+
 @media screen and (min-width:576px) {
     .banner {
         padding: 0 10%;
@@ -408,8 +426,9 @@ main#inicio {
 }
 
 @media screen and (min-width: 1200px) {
-
+    
     .contenedorPortada, .presentacion, #carouselExampleCaptions{
         width: 70%
     }
 }
+
