@@ -1,7 +1,28 @@
 from db import conexionMySQL
 
-#Read
 
+# Create
+def guardar_nuevo_paquete(nom, dest, desc, imgURL, prec, disp):
+
+    conexion = conexionMySQL()
+    result = 0
+
+    try:
+        with conexion.cursor() as cursor:
+            query = "INSERT INTO Paquetes (nombre, destino, descripcion, imagen, precio, disponible) VALUES (%s, %s, %s, %s, %s, %s)"
+            cursor.execute(query, (nom, dest, desc, imgURL, prec, disp))
+            conexion.commit()
+            result = cursor.rowcount
+    except Exception as e:
+        conexion.rollback()
+        print(f"Ocurrió un error: {e}")
+    finally:
+        conexion.close()
+
+    return result
+
+
+#Read
 def obtener_paquetes():
     #Conexion
     conexion = conexionMySQL()
@@ -18,9 +39,26 @@ def obtener_paquetes():
 
         return resultados
 
-# Pendientes:
-# Create
+
 # Update
+def editar_paquete(id, nom, dest, desc, imgURL, prec, disp):
+
+    conexion = conexionMySQL()
+    result = 0
+
+    try:
+        with conexion.cursor() as cursor:
+            query = "UPDATE Paquetes SET nombre = %s, destino = %s, descripcion = %s, imagen = %s, precio = %s, disponible = %s WHERE id = %s"
+            cursor.execute(query, (nom, dest, desc, imgURL, prec, disp, id))
+            conexion.commit()
+            result = cursor.rowcount
+    except Exception as e:
+        conexion.rollback()
+        print(f"Ocurrió un error: {e}")
+    finally:
+        conexion.close()
+
+    return result
 
 
 #Delete
