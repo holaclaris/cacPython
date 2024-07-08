@@ -13,6 +13,7 @@
 
 body {
     background-color: #f1e1d5;
+    background-image: url(https://img.freepik.com/free-photo/white-sand-textured-background-with-copy-space_53876-106183.jpg?w=1060&t=st=1720457591~exp=1720458191~hmac=1b3424bdd426ecd8d53fcdeb7e7bff253a0e07d94ea37fa69991dc0e68c9e424);
     color: black;
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
@@ -285,10 +286,17 @@ main#inicio {
     object-fit: cover;
     margin: 0 auto;
 }
+#myModal{
+    z-index: 4;
+}
 
 /*Media Queries*/
 
 @media screen and (max-width:576px){
+    #barraOcultar{
+        background-image: url(https://img.freepik.com/free-photo/white-sand-textured-background-with-copy-space_53876-106183.jpg?w=1060&t=st=1720457591~exp=1720458191~hmac=1b3424b…);
+    }
+
     .contenedorTitulo.paginas{
         left: 14%;
         top: 5px;
@@ -377,7 +385,6 @@ main#inicio {
     #hamburguesa {
         display: none;
     }
-
 
     .contenedorPortada{
         width:100%;
