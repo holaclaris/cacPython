@@ -32,3 +32,34 @@ const clickCruz=(e)=>{
 
 hamburguesa.addEventListener('click', clickHamburguesa);
 cruz.addEventListener('click', clickCruz);
+
+
+// Formulario CRUD
+var modal = document.getElementById("myModal");
+var paquetesForm = document.getElementById("paquetesForm");
+var span = document.getElementsByClassName("close")[0];
+
+// Cierra la ventana emergente con:
+// click en la x
+span.onclick = function () {
+    modal.style.display = "none";
+}
+// clic fuera de la ventana 
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+// Abre la ventana emergente y cargar datos en el formulario
+function openModal(action, id, nombre, destino, descripcion, imagen, precio, disponible) {
+    paquetesForm.action = action;
+    document.getElementById('id').value = id;
+    document.getElementById('nombre').value = nombre;
+    document.getElementById('destino').value = destino;
+    document.getElementById('descripcion').value = descripcion;
+    document.getElementById('imagen').value = imagen;
+    document.getElementById('precio').value = precio;
+    document.getElementById('disponible').value = disponible;
+    modal.style.display = "block";
+}
