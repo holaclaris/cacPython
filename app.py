@@ -18,8 +18,37 @@ def guias():
     return render_template('guias.html')
 
 
-# delete
+# Create
+@app.route("/destinos/guardar_nuevo_paquete", methods=["POST"])
+def guardar_nuevo_paquete_route():
+    nom = request.form["nombre"]
+    dest = request.form["destino"]
+    desc = request.form["descripcion"]
+    imgURL = request.form["imagen"]
+    prec = request.form["precio"]
+    disp = request.form["disponible"]
 
+    guardar_nuevo_paquete(nom, dest, desc, imgURL, prec, disp)
+
+    return redirect("/destinos")
+
+
+# Update
+@app.route("/destinos/editar_paquete/<int:id>", methods=["POST"])
+def editar_paquete_route(id):
+    nom = request.form["nombre"]
+    dest = request.form["destino"]
+    desc = request.form["descripcion"]
+    imgURL = request.form["imagen"]
+    prec = request.form["precio"]
+    disp = request.form["disponible"]
+
+    editar_paquete(id, nom, dest, desc, imgURL, prec, disp)
+
+    return redirect("/destinos")
+
+
+# delete
 @app.route('/destinos/eliminar_paquete/<int:id>')
 def delete_paquete(id):
     eliminar_paquete(id)
