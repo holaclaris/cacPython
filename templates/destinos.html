@@ -30,7 +30,7 @@
 
                 <div class="item">
                     <h2>{{ i[1]}}</h2>
-                    <img src={{ i[4] }} alt={{ i[1] }}>
+                    <img src={{ i[4] }} alt={{ i[2] }}>
                     <p> {{ i[3] }}</p>
 
                     <a href="/destinos/editar_paquete/{{i[0]}}"><button class="btn-comprar">Editar</button></a>
@@ -39,6 +39,39 @@
 
                 {% endfor %}
 
+                <button class="btn-comprar" onclick="openModal('/destinos/guardar_nuevo_paquete', '', '', '', '', '', '', '')">Agregar Paquete</button>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Formulario de Paquete</h2>
+                        <form id="paquetesForm" action="" method="POST">
+                            <input type="hidden" id="id" name="id">
+
+                            <label for="nombre">Nombre:</label><br>
+                            <input type="text" id="nombre" name="nombre" placeholder="Nombre del Paquete" required><br><br>
+
+                            <label for="destino">Destino:</label><br>
+                            <input type="text" id="destino" name="destino" placeholder="Destino turistico" required><br><br>
+
+                            <label for="descripcion">Descripción:</label><br>
+                            <textarea id="descripcion" name="descripcion" placeholder="Descripción del Paquete" required></textarea><br><br>
+
+                            <label for="imagen">URL de la Imagen:</label><br>
+                            <input type="text" id="imagen" name="imagen" placeholder="Direccion de la imagen" required><br><br>
+
+                            <label for="precio">Precio:</label><br>
+                            <input type="text" id="precio" name="precio" placeholder="Precio del Paquete" pattern="\d{4}\.\d{2}" required><br><br>
+
+                            <label for="disponible">Disponible:</label><br>
+                            <select id="disponible" name="disponible" required>
+                                <option value="1">Disponible</option>
+                                <option value="0">No Disponible</option>
+                            </select><br><br>
+                            <button type="submit">Guardar</button>
+                        </form>
+                    </div>
+                </div>
                 <!-- Contenido de la web anterior: -->
                  
                 <!-- <div class="item">
