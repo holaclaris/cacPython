@@ -1,15 +1,18 @@
 .guias h1 {
+    font-size:2em;
     font-variant: all-small-caps;
+    font-weight: 600;
     margin: 10px;
     padding-bottom:20px;
     text-align: center;
 }
+
 main#nosotros{
     margin-left:15px;
     margin-right:15px;
 }
 main#nosotros h2{
-    font-size: 1.7em;
+    font-size: 1.5em;
 }
 
 .cards {
@@ -92,7 +95,6 @@ main#nosotros h2{
 }
 
 @media screen and (max-width:992px) {
-
     .cards {
         flex-direction: column;
         height: 800px;

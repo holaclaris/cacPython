@@ -28,17 +28,19 @@ def obtener_paquetes():
     conexion = conexionMySQL()
     
     # Consulta db
-    with conexion.cursor() as cursor:
-        query = "SELECT * FROM paquetes"
-        cursor.execute(query)
-        resultados = cursor.fetchall()
-        conexion.commit()
+    try:
+        with conexion.cursor() as cursor:
+            query = "SELECT * FROM paquetes"
+            cursor.execute(query)
+            resultados = cursor.fetchall()
+            conexion.commit()
 
-    # Cerrar conexion
+    except Exception as e:
+            print(f"Ocurrió un error: {e}")
+    finally:
         conexion.close()
 
-        return resultados
-
+    return resultados
 
 # Update
 def editar_paquete(id, nom, dest, desc, imgURL, prec, disp):
@@ -60,19 +62,20 @@ def editar_paquete(id, nom, dest, desc, imgURL, prec, disp):
 
     return result
 
-
 #Delete
-
 def eliminar_paquete(id):
 
     conexion= conexionMySQL()
-    
-    with conexion.cursor() as cursor:
-        query = "DELETE FROM paquetes WHERE id=%s"
-        cursor.execute(query, id)
-        result = cursor
-
-    conexion.commit()
-    conexion.close()
+    try:
+        with conexion.cursor() as cursor:
+            query = "DELETE FROM paquetes WHERE id=%s"
+            cursor.execute(query, id)
+            result = cursor
+        conexion.commit()
+    except Exception as e:
+        conexion.rollback()
+        print(f"Ocurrió un error: {e}")
+    finally:
+        conexion.close()
 
     return result

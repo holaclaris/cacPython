@@ -91,7 +91,7 @@ header {
     color: black;
     filter: drop-shadow(2px 4px 2px white);
     font-family: "Brittany", serif;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 600;
     padding:10px 0;
 }
@@ -155,7 +155,7 @@ header {
 }
 
 .navBar ul a {
-    color: black;
+    color: #333;
     filter: drop-shadow(2px 4px 2px white);
     font-size: 1.2em;
     padding: 10px;
@@ -165,7 +165,6 @@ header {
 ul.navList.navLinks{
     padding-left:0;
 }
-
 
 .contenedorPortada{
     overflow: hidden;
@@ -187,9 +186,6 @@ ul.navList.navLinks{
     background-color: #f1e1d5;
     display: none;
 }
-main{
-    padding:15px;
-}
 
 main#inicio {
     padding: 15px 0;
@@ -198,7 +194,7 @@ main#inicio {
 .presentacion {
     display: flex;
     flex-direction: column;
-    font-size: 1em;
+    font-size: 1.1em;
     margin: auto;
     padding: 20px;
     width: 100%;
@@ -211,6 +207,7 @@ main#inicio {
     justify-content: center;
     align-items: center;
     border-top: 1px solid black;
+    margin-top: 40px;
     padding: 20px 0;
 }
 
@@ -292,7 +289,7 @@ main#inicio {
 
 /*Media Queries*/
 
-@media screen and (max-width:576px){
+@media screen and (max-width: 450px){
     #barraOcultar{
         background-image: url(https://img.freepik.com/free-photo/white-sand-textured-background-with-copy-space_53876-106183.jpg?w=1060&t=st=1720457591~exp=1720458191~hmac=1b3424b…);
     }
@@ -309,11 +306,10 @@ main#inicio {
         display:none
     }
     main.paginas{
-        margin-top:40px;
+        margin-top:50px;
     }
 }
-
-@media screen and (min-width:576px) {
+@media screen and (min-width: 450px){
     .banner {
         padding: 0 10%;
     }
@@ -331,7 +327,7 @@ main#inicio {
         flex-direction:row;
         justify-content: center;
         align-items: center;
-        padding: 10px;
+        padding-top: 10px;
         position: relative;
         left: 0;
         top: 0;
@@ -339,7 +335,6 @@ main#inicio {
 
     .contenedorTitulo h1 {
         padding: 15px;
-
     }
 
     .contenedorTitulo p {
@@ -363,7 +358,6 @@ main#inicio {
         font-size: 1em;
     }
 
-
     .navBar .navLinks {
         display: flex;
         flex-direction: row;
@@ -376,7 +370,7 @@ main#inicio {
     }
 
     #barraOcultar {
-        background-color: #eaebef00;
+        background-color:#ffffff30;
         display: flex;
         padding: 0;
     }
@@ -405,7 +399,6 @@ main#inicio {
         align-items: center;
     }
 
-
     .navList {
         display: flex;
         align-items: center;
@@ -414,7 +407,6 @@ main#inicio {
     .presentacion {
         width: 80%;
     }
-
 }
 
 @media screen and (min-width: 768px){
@@ -429,10 +421,6 @@ main#inicio {
     .contenedorPortada{
         margin-top:20px;
     }
-    .presentacion{
-        padding: 35px 20px;
-    }
-
 }
 
 @media screen and (min-width: 1200px) {
