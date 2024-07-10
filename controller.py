@@ -73,7 +73,6 @@ def eliminar_paquete(id):
             result = cursor
         conexion.commit()
     except Exception as e:
-        conexion.rollback()
         print(f"Ocurrió un error: {e}")
     finally:
         conexion.close()
