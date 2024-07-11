@@ -51,15 +51,23 @@ window.onclick = function (event) {
     }
 }
 
-// Abre la ventana emergente y cargar datos en el formulario
-function openModal(action, id, nombre, destino, descripcion, imagen, precio, disponible) {
+// Muestra la ventana emergente y cargar datos del paquete o los deja en blanco
+function cargarFormulario(action, id, nombre, destino, descripcion, imagen, precio, disponible) {
     paquetesForm.action = action;
-    document.getElementById('id').value = id;
-    document.getElementById('nombre').value = nombre;
-    document.getElementById('destino').value = destino;
-    document.getElementById('descripcion').value = descripcion;
-    document.getElementById('imagen').value = imagen;
-    document.getElementById('precio').value = precio;
-    document.getElementById('disponible').value = disponible;
+    document.getElementById('id').value = id || '';
+    document.getElementById('nombre').value = nombre || '';
+    document.getElementById('destino').value = destino || '';
+    document.getElementById('descripcion').value = descripcion || '';
+    document.getElementById('imagen').value = imagen || '';
+    document.getElementById('precio').value = precio || '';
+    document.getElementById('disponible').value = disponible || 1;
     modal.style.display = "block";
 }
+
+// Ocultar mensajes flash 
+setTimeout(function () {
+    var flashes = document.querySelectorAll('.flashes');
+    flashes.forEach(function (flash) {
+        flash.classList.add('oculto');
+    });
+}, 3000); //1000 -> 1 segundo
