@@ -331,7 +331,7 @@ main#inicio {
     }
 
     .contenedorTitulo {
-        background-color:#595b32ab;
+        background-color:#42a28091;
         flex-direction:row;
         justify-content: center;
         align-items: center;
@@ -372,8 +372,8 @@ main#inicio {
         justify-content: space-evenly;
         margin: auto;
     }
-    .navBar.navLinks li{
-        padding:5px;
+    .navBar .navLinks li{
+        padding:7px;
     }
 
     .navBar ul li {
@@ -433,7 +433,7 @@ main#inicio {
         justify-content: space-evenly;
         width:80%;
     }
-    .navBar.navLinks li{
+    .navBar .navLinks li{
         padding:10px;
     }
     .navBar ul a{
