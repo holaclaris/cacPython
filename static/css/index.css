@@ -81,7 +81,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-    border-top: 7px solid #f7f7f5;
+    border-top: 2px solid #f7f7f5;
 }
 
 .contenedorTitulo {
@@ -331,6 +331,7 @@ main#inicio {
     }
 
     .contenedorTitulo {
+        background-color:#595b32ab;
         flex-direction:row;
         justify-content: center;
         align-items: center;
@@ -362,7 +363,7 @@ main#inicio {
     }
 
     .navBar ul a {
-        font-size: 1em;
+        font-size: 0.9em;
     }
 
     .navBar .navLinks {
@@ -370,6 +371,9 @@ main#inicio {
         flex-direction: row;
         justify-content: space-evenly;
         margin: auto;
+    }
+    .navBar.navLinks li{
+        padding:5px;
     }
 
     .navBar ul li {
@@ -417,16 +421,23 @@ main#inicio {
 }
 
 @media screen and (min-width: 768px){
-    .navList.navLinks{
-        justify-content: space-evenly;
-        width:80%;
-    }
+   
     .contenedorPortada, .presentacion, #carouselExampleCaptions{
         width: 80%;
         margin:auto;
     }
     .contenedorPortada{
         margin-top:20px;
+    }
+    .navList.navLinks{
+        justify-content: space-evenly;
+        width:80%;
+    }
+    .navBar.navLinks li{
+        padding:10px;
+    }
+    .navBar ul a{
+        font-size:1em;
     }
 }
 
