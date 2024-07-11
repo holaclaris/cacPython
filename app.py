@@ -47,9 +47,9 @@ def editar_paquete_route(id):
 
     filas_modificadas = editar_paquete(id, nom, dest, desc, imgURL, prec, disp)
     if filas_modificadas > 0:
-        flash('El paquete se actualizo correctamente!', 'success')
+        flash('El paquete se actualizó correctamente!', 'success')
     else:
-        flash('El paquete no pudo ser actualizo!', 'error')
+        flash('El paquete no pudo ser actualizado!', 'error')
 
     return redirect('/destinos')
 
@@ -58,7 +58,7 @@ def editar_paquete_route(id):
 def delete_paquete(id):
     filas_eliminadas = eliminar_paquete(id)
     if filas_eliminadas > 0:
-        flash('El paquete se elimino correctamente!', 'success')
+        flash('El paquete se eliminó correctamente!', 'success')
     else:
         flash('El paquete no pudo ser eliminado!', 'error')
     return redirect('/destinos')
