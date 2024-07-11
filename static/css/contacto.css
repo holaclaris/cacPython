@@ -1,6 +1,6 @@
-/* main {
+#contacto {
     padding: 40px 0;
-} */
+} 
 
 .formulario {
     width: 90%;
@@ -13,15 +13,33 @@
 }
 
 .titulo {
-    background-image: url(../assets/images/contacto-imagen.jpg);
+    background-image: url(https://fundacionpasoslibres.org/wp-content/uploads/Post-Destacada-DatingApp-1920x960.webp) ;
     background-size: cover;
     color: #fff;
-    padding: 20px;
     text-align: center;
     font-weight: bold;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     flex: 1;
+}
+.contenedorTituloForm{
+    background-color: black;
+    background-color: #15143766;
+    border-radius: 7px;
+    height:100%;
+    width: 100%;
+    padding:10px;
+}
+.textoFormulario{
+    filter:drop-shadow(2px 4px 4px black);
+}
+p.textoFormulario {
+    font-size:1.1em;
+    font-weight:500;
+    padding: 0 20px 10px;
+}
+h2.textoFormulario {
+    margin-bottom:15px;
 }
 
 .contenido {

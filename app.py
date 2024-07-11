@@ -5,10 +5,12 @@ app = Flask(__name__)
 app.secret_key = 'Grupo17'
 
 #Rutas
+#Inicio ------
 @app.route('/')
 def index():
     return render_template('index.html')
 
+#Destinos------
 #Read
 @app.route('/destinos')
 def destinos():
@@ -51,7 +53,6 @@ def editar_paquete_route(id):
 
     return redirect('/destinos')
 
-
 # delete
 @app.route('/destinos/eliminar_paquete/<int:id>')
 def delete_paquete(id):
@@ -62,9 +63,15 @@ def delete_paquete(id):
         flash('El paquete no pudo ser eliminado!', 'error')
     return redirect('/destinos')
 
+#Nuestros guias ------
 @app.route('/guias')
 def guias():
     return render_template('guias.html')
+
+#Contacto ----
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')
 
 if __name__=='__main__':
     app.run(debug=True)

@@ -21,6 +21,13 @@ body {
 a {
     text-decoration: none;
 }
+button{
+    transition: all 0.2s ease;
+}
+button:hover{
+    transform:scale(1.05);
+    filter:drop-shadow(2px 2px 2px black)
+}
 
 .banner {
     display: flex;
