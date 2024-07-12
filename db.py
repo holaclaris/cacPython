@@ -7,6 +7,9 @@ host = "localhost"
 user = "root"
 password = ""
 db = "wawdb"
+
+#Datos para Pythonanywhere:
+
 # host = "holaclaris.mysql.pythonanywhere-services.com"
 # user = "holaclaris"
 # password = "lunita29"
