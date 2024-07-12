@@ -9,7 +9,7 @@ def guardar_nuevo_paquete(nom, dest, desc, imgURL, prec, disp):
 
     try:
         with conexion.cursor() as cursor:
-            query = "INSERT INTO Paquetes (nombre, destino, descripcion, imagen, precio, disponible) VALUES (%s, %s, %s, %s, %s, %s)"
+            query = "INSERT INTO paquetes (nombre, destino, descripcion, imagen, precio, disponible) VALUES (%s, %s, %s, %s, %s, %s)"
             cursor.execute(query, (nom, dest, desc, imgURL, prec, disp))
             conexion.commit()
             result = cursor.rowcount
@@ -50,7 +50,7 @@ def editar_paquete(id, nom, dest, desc, imgURL, prec, disp):
 
     try:
         with conexion.cursor() as cursor:
-            query = "UPDATE Paquetes SET nombre = %s, destino = %s, descripcion = %s, imagen = %s, precio = %s, disponible = %s WHERE id = %s"
+            query = "UPDATE paquetes SET nombre = %s, destino = %s, descripcion = %s, imagen = %s, precio = %s, disponible = %s WHERE id = %s"
             cursor.execute(query, (nom, dest, desc, imgURL, prec, disp, id))
             conexion.commit()
             result = cursor.rowcount
